@@ -1,3 +1,19 @@
+<?php
+session_start(); //test session
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+
+    if ($username === 'admin' && $password === 'admin') {
+        $_SESSION['user'] = $username;
+        header('Location: ?page=movies');
+        exit;
+    } else {
+        $error = 'Wrong username or password!';
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +27,16 @@
     <div class="container-auth">
         <h1 class="title-auth">LOGIN</h1>
         <p class="subtitle-auth">Enter the galaxy and explore the universe</p>
-        <form action="login.php" method="POST"><br>
+        <?php if (isset($error)): ?>
+            <p class="error-msg"><?php echo $error; ?></p>
+        <?php endif; ?>
+        <form action="?page=login" method="POST"><br>
             <input type="text" id="username" name="username" placeholder="username" class="input-auth" required><br>
             <input type="password" id="password" name="password" placeholder="password" class="input-auth" required><br>
             <label for="remember" class="remember-label"><input type="checkbox" id="remember" name="remember">Stay signed in</label><br>
             <button type="submit" id="signin" class="red-btn">SIGN-IN</button>
         </form>
-        <button onclick="window.location.href='register.php'" type="button" class="transparent-btn">CREATE ACCOUNT</button>
+        <button onclick="window.location.href='?page=register'" type="button" class="transparent-btn">CREATE ACCOUNT</button>
     </div>
 </body>
 </html>

@@ -12,9 +12,9 @@
     <nav class="navbar">
         <img src="../assets/starwars-logo.png" alt="Star Wars Logo" class="nav-logo">
         <div class="nav-menu">
-            <a href="../pages/movies.php" class="<?php echo $activePage == 'Movies' ? 'active' : ''; ?>">Movies</a>
-            <a href="../pages/characters.php" class="<?php echo $activePage == 'Characters' ? 'active' : ''; ?>">Characters</a>
-            <a href="../pages/planets.php" class="<?php echo $activePage == 'Planets' ? 'active' : ''; ?>">Planets</a>
+            <a href="?page=movies" class="<?php echo $activePage == 'Movies' ? 'active' : ''; ?>">Movies</a>
+            <a href="?page=characters" class="<?php echo $activePage == 'Characters' ? 'active' : ''; ?>">Characters</a>
+            <a href="?page=planets" class="<?php echo $activePage == 'Planets' ? 'active' : ''; ?>">Planets</a>
         </div>
         <div class="nav-search">
             <input type="text" placeholder="">
