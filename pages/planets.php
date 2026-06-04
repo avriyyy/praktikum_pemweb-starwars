@@ -1,6 +1,6 @@
 <?php
 $activePage = 'Planets';
-include '../includes/navbar.php';
+include '../includes/header.php';
 ?>
 
 <?php include '../includes/footer.php'; ?>
