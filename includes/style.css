@@ -482,22 +482,161 @@ footer .footer-text {
     color: #FFFFFF;
 }
 
-.home-title {
-    width: min(1087px, 90vw);
-    font-family: "Orbitron", sans-serif;
-    font-weight: 500;
-    font-size: clamp(40px, 5vw, 64px);
-    line-height: 100%;
-    color: #ffffff;
+/*home*/
+
+.hero,
+.movies,
+.characters,
+.planets {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-.home-description {
-    margin-top: -20px;
-    width: min(622px, 90vw);
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: #fff;
-    opacity: 0.8;
+.hero::before,
+.movies::before,
+.characters::before,
+.planets::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.64;
+    z-index: 0;
 }
 
+.hero::before {
+    background-image: url('../assets/home1.jpg');
+}
+
+.movies::before {
+    background-image: url('../assets/home2.jpg');
+}
+
+.characters::before {
+    background-image: url('../assets/home3.jpg');
+    transform: scaleX(-1);
+}
+
+.planets::before {
+    background-image: url('../assets/home4.png');
+}
+
+.hero-content,
+.movies-content,
+.characters-content,
+.planets-content {
+    position: absolute;
+    z-index: 2;
+}
+
+.hero-content {
+    left: 48px;
+    bottom: 80px;
+    max-width: 850px;
+}
+
+.movies-content {
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 450px;
+}
+
+.characters-content {
+    right: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 450px;
+}
+
+.planets-content {
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 450px;
+}
+
+.hero-content h1,
+.movies-content h1,
+.characters-content h1,
+.planets-content h1 {
+    margin: 0 0 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.hero-content p,
+.movies-content p,
+.characters-content p,
+.planets-content p {
+    margin: 0 0 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(255,255,255,0.9);
+}
+
+.hero-content button,
+.movies-content button,
+.characters-content button,
+.planets-content button {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: #DC2626;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.hero-content button:hover,
+.movies-content button:hover,
+.characters-content button:hover,
+.planets-content button:hover {
+    background: #B91C1C;
+}
+
+/*@media (max-width: 768px) {
+
+    .hero-content,
+    .movies-content,
+    .characters-content,
+    .planets-content {
+        left: 24px;
+        right: 24px;
+        max-width: none;
+        text-align: left;
+    }
+
+    .movies-content,
+    .characters-content,
+    .planets-content {
+        top: auto;
+        bottom: 80px;
+        transform: none;
+    }
+
+    .hero-content h1,
+    .movies-content h1,
+    .characters-content h1,
+    .planets-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p,
+    .movies-content p,
+    .characters-content p,
+    .planets-content p {
+        font-size: 16px;
+    }
+}*/
