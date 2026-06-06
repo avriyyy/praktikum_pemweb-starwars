@@ -26,4 +26,3 @@
         </svg>
     </nav>
     <img src="../assets/page-bg.jpg" alt="Page Background" class="page-bg">
-    <img src="../assets/starwars-ship.png" alt="ship" class="starwars-ship">

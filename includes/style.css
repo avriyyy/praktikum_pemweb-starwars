@@ -213,6 +213,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .nav-logo {
@@ -294,30 +295,6 @@ main {
     pointer-events: none;
 }
 
-.pages-title {
-    position: absolute;
-    width: 1087px;
-    max-width: 90%;
-    top: 148px;
-    left: 48px;
-    font-family: "Orbitron", sans-serif;
-    font-weight: 500;
-    font-size: 64px;
-    line-height: 100%;
-    color: #ffffff;
-}
-
-.starwars-ship {
-    position: absolute;
-    top: 278px;
-    left: 905px;
-    width: min(626px, 45vw);
-    height: auto;
-    opacity: 0.8;
-    transform: scaleX(-1) rotate(17.76deg);
-    object-fit: contain;
-}
-
 .btn-movies {
     position: absolute;
     top: 500px;
@@ -337,18 +314,6 @@ main {
 
 .btn-movies:hover {
     background: #b91c1c;
-}
-
-.pages-description {
-    position: absolute;
-    top: 245px;
-    left: 48px;
-    width: min(622px, 90vw);
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: #ffffff;
-    opacity: 0.8;
 }
 
 footer {
@@ -376,17 +341,7 @@ footer .footer-text {
 }
 
 .section-movies {
-    padding: 80px 48px;
-}
-
-.h2-title {
-    margin-top: 695px;
-    padding-left: 48px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
-    font-size: clamp(32px, 4vw, 48px);
-    line-height: 100%;
-    color: #FFFFFF;
+    padding: 100px 48px;
 }
 
 .movies-container {
@@ -422,24 +377,127 @@ footer .footer-text {
 
 .movie-info h3 {
     margin: 0 0 6px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 1.4;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .year {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
 }
 
 .rating {
     margin: 4px 0 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.section-title {
+    margin-bottom: 60px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
     font-weight: 500;
     color: #FFFFFF;
 }
+
+.section-characters {
+    padding: 100px 48px;
+}
+
+
+.characters-container {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    column-gap: 200px;
+    row-gap: 70px;
+}
+
+.character-card img {
+    width: 200px;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+
+.character-card:hover img {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(59,130,246,0.35);
+}
+
+.character-card p {
+    margin-top: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.section-planets {
+    padding: 100px 48px;
+}
+
+.planets-container {
+    display: grid;
+    grid-template-columns: repeat(2, 402px);
+    justify-content: center;
+    column-gap: 250px;
+    row-gap: 100px;
+}
+
+.planet-card {
+    text-align: center;
+}
+
+.planet-card img {
+    width: 402px;
+    height: 481px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.planet-card:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.2));
+}
+
+.planet-card p {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.home-title {
+    width: min(1087px, 90vw);
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 100%;
+    color: #ffffff;
+}
+
+.home-description {
+    margin-top: -20px;
+    width: min(622px, 90vw);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.8;
+}
+

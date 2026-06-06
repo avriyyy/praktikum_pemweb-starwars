@@ -3,14 +3,10 @@ $title = "Movies";
 $activePage = "Movies";
 include '../includes/navbar.php';
 ?>
-<div>
-    <h1 class="pages-title">Explore The Star Wars Galaxy</h1>
-    <p class="pages-description">Discover movies, characters, and planets across the universe.</p>
-    <button class="btn-movies">Explore Now</button>
-</div>
+
 <section class="section-movies">
     
-    <h2 class="h2-title">Popular Movies</h2>
+    <h2 class="section-title">Popular Movies</h2>
     
     <div class="movies-container">
         <div class="movie-card">
