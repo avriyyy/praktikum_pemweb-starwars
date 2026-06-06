@@ -8,13 +8,12 @@
     <title>Star Wars - <? echo $activePage; ?></title>
 </head>
 <body class="pages">
-    <img src="../assets/page-bg.jpg" alt="Page Background" class="page-bg">
     <nav class="navbar">
         <img src="../assets/starwars-logo.png" alt="Star Wars Logo" class="nav-logo">
         <div class="nav-menu">
-            <a href="?page=movies" class="<?php echo $activePage == 'Movies' ? 'active' : ''; ?>">Movies</a>
-            <a href="?page=characters" class="<?php echo $activePage == 'Characters' ? 'active' : ''; ?>">Characters</a>
-            <a href="?page=planets" class="<?php echo $activePage == 'Planets' ? 'active' : ''; ?>">Planets</a>
+            <a href="movies.php" class="<?php echo $activePage == 'Movies' ? 'active' : ''; ?>">Movies</a>
+            <a href="characters.php" class="<?php echo $activePage == 'Characters' ? 'active' : ''; ?>">Characters</a>
+            <a href="planets.php" class="<?php echo $activePage == 'Planets' ? 'active' : ''; ?>">Planets</a>
         </div>
         <div class="nav-search">
             <input type="text" placeholder="">
@@ -26,3 +25,5 @@
         <path d="M33.3334 35V31.6667C33.3334 29.8986 32.631 28.2029 31.3808 26.9526C30.1305 25.7024 28.4349 25 26.6667 25H13.3334C11.5653 25 9.86961 25.7024 8.61937 26.9526C7.36913 28.2029 6.66675 29.8986 6.66675 31.6667V35M26.6667 11.6667C26.6667 15.3486 23.682 18.3333 20.0001 18.3333C16.3182 18.3333 13.3334 15.3486 13.3334 11.6667C13.3334 7.98477 16.3182 5 20.0001 5C23.682 5 26.6667 7.98477 26.6667 11.6667Z" stroke="#B3B3B3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </nav>
+    <img src="../assets/page-bg.jpg" alt="Page Background" class="page-bg">
+    <img src="../assets/starwars-ship.png" alt="ship" class="starwars-ship">

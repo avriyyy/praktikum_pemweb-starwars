@@ -1,3 +1,10 @@
+<?php
+$title = "Characters";
+$activePage = "Characters";
+include '../includes/navbar.php';
+?>
 
 
-<!-- Characters content here -->
+<?php
+include '../includes/footer.php';
+?>

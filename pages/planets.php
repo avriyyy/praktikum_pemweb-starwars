@@ -1,3 +1,10 @@
+<?php
+$title = "Planets";
+$activePage = "Planets";
+include '../includes/navbar.php';
+?>
 
 
-<!-- Planets content here -->
+<?php
+include '../includes/footer.php';
+?>
