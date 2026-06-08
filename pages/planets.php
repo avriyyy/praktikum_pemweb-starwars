@@ -9,12 +9,12 @@ include '../includes/navbar.php';
     <div class="planets-container">
 
         <div class="planet-card">
-            <img src="../assets/planet1.jpg" alt="Tatooine">
+            <img src="../assets/planet1.png" alt="Tatooine">
             <p>Tatooine</p>
         </div>
 
         <div class="planet-card">
-            <img src="../assets/planet2.png" alt="Naboo">
+            <img src="../assets/planet2.png" alt="">
             <p>Naboo</p>
         </div>
 

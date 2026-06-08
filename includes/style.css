@@ -462,15 +462,8 @@ footer .footer-text {
 
 .planet-card img {
     width: 402px;
-    height: 481px;
-    object-fit: cover;
-    border-radius: 50%;
+    height: auto;
     overflow: hidden;
-}
-
-.planet-card:hover img {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 20px rgba(255,255,255,0.2));
 }
 
 .planet-card p {
@@ -640,3 +633,535 @@ footer .footer-text {
         font-size: 16px;
     }
 }*/
+
+
+/*dropdown user*/
+
+.profile-dropdown {
+    position: relative;
+    margin-left: 20px;
+}
+
+.profile-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.profile-btn svg {
+    display: block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 67px;
+    right: 0;
+    width: 260px;
+    height: auto;
+    background: #09152F;
+    border-radius: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: .25s ease;
+    box-shadow: 0 0 25px rgba(0,0,0,.35);
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.dropdown-header img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-header span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.dropdown-menu a img {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-menu a span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.dropdown-menu a:hover span {
+    opacity: .8;
+}
+
+.dropdown-menu .logout span {
+    color: #FF0000;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.profile-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 24px;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.profile-card {
+    width: 760px;
+    max-width: 90%;
+    background: #10244D;
+    border-radius: 10px;
+    padding: 28px;
+    text-align: center;
+    color: white;
+}
+
+.profile-card h2 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.profile-card p {
+    margin: 4px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.profile-email {
+    margin-top: 20px;
+}
+
+.profile-email span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.profile-email p {
+    margin-top: 4px;
+    font-size: 22px;
+}
+
+.profile-stats {
+    margin-top: 40px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    width: 180px;
+    height: 90px;
+    background: #10244D;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-card small {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.stat-card h3 {
+    margin: 4px 0 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.favorites-section {
+    padding-top: 120px;
+    padding-left: 48px;
+    padding-right: 48px;
+    min-height: 100vh;
+}
+
+.favorites-title {
+    margin: 0 0 80px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.favorites-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
+}
+
+.favorite-card {
+    width: 180px;
+    height: 270px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.favorite-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.favorite-card:hover {
+    transform: translateY(-8px);
+}
+
+.movie-detail {
+    max-width: 1200px;
+    margin: 120px auto 80px;
+    padding: 0 48px;
+}
+
+.movie-cover {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.movie-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(50%);
+}
+
+.movie-info {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.movie-poster {
+    width: 180px;
+    height: 270px;
+    flex-shrink: 0;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.movie-content h1 {
+    margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+}
+
+.movie-meta {
+    color: #D1D5DB;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.movie-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-watch,
+.btn-favorite {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-watch {
+    background: #DC2626;
+    color: white;
+}
+
+.btn-favorite {
+    background: #1F2937;
+    color: white;
+}
+
+.movie-content p {
+    color: white;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+}
+
+.movie-tags {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.movie-tags span {
+    background: #172554;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.section-block {
+    margin-bottom: 50px;
+}
+
+.section-block h2 {
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #FF00D4;
+}
+
+.cast-grid {
+    display: flex;
+    gap: 25px;
+}
+
+.cast-card {
+    text-align: center;
+}
+
+.cast-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cast-card p {
+    color: white;
+    margin-top: 8px;
+}
+
+.planet-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.planet-card {
+    text-align: center;
+}
+
+.planet-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.planet-card p {
+    color: white;
+}
+
+.related-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.related-card {
+    width: 120px;
+}
+
+.related-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.related-card p {
+    margin-top: 8px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.character-detail {
+    max-width: 1200px;
+    margin: 120px auto 80px;
+    padding: 0 48px;
+}
+
+.character-banner {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.character-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character-info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.character-image {
+    width: 180px;
+    height: 270px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,255,100,.25);
+}
+
+.character-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character-content {
+    flex: 1;
+}
+
+.character-content h1 {
+    margin: 0 0 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: white;
+}
+
+.character-meta {
+    margin-bottom: 30px;
+}
+
+.character-meta p {
+    margin: 6px 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.character-meta strong {
+    font-weight: 600;
+}
+
+.character-content h2,
+.related-section h2 {
+    margin-bottom: 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    color: #FF00FF;
+}
+
+.biography {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.related-grid {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.related-card {
+    width: 120px;
+}
+
+.related-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.related-card p {
+    margin-top: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 20px;
+    color: rgba(255,255,255,.7);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}

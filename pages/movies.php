@@ -10,7 +10,7 @@ include '../includes/navbar.php';
     
     <div class="movies-container">
         <div class="movie-card">
-            <img src="../assets/movie1.jpg" alt="">
+            <a href="detailMovie.php"><img src="../assets/movie1.jpg" alt=""></a>
             <div class="movie-info">
                 <h3>The Empire Strikes Back</h3>
                 <p class="year">1980</p>
@@ -19,7 +19,7 @@ include '../includes/navbar.php';
         </div>
 
         <div class="movie-card">
-            <img src="../assets/movie2.jpg" alt="">
+            <a href="detailMovie.php"><img src="../assets/movie2.jpg" alt=""></a>
             <div class="movie-info">
                 <h3>Return of the Jedi</h3>
                 <p class="year">1983</p>
@@ -28,7 +28,7 @@ include '../includes/navbar.php';
         </div>
 
         <div class="movie-card">
-            <img src="../assets/movie3.jpg" alt="">
+            <a href="detailMovie.php"><img src="../assets/movie3.jpg" alt=""></a>
             <div class="movie-info">
                 <h3>Revenge of the Sith</h3>
                 <p class="year">2005</p>
@@ -37,7 +37,7 @@ include '../includes/navbar.php';
         </div>
 
         <div class="movie-card">
-            <img src="../assets/movie4.jpg" alt="">
+            <a href="detailMovie.php"><img src="../assets/movie4.jpg" alt=""></a>
             <div class="movie-info">
                 <h3>Roguo One</h3>
                 <p class="year">2016</p>

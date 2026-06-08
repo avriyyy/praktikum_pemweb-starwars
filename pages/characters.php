@@ -9,7 +9,7 @@ include '../includes/navbar.php';
     <div class="characters-container">
 
         <div class="character-card">
-            <img src="../assets/character1.png" alt="Darth Vader">
+            <a href="detailCharacter.php"><img src="../assets/character1.png" alt="Darth Vader"></a>
             <p>Darth Vader</p>
         </div>
 
