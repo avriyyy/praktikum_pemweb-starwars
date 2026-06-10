@@ -1,36 +1,49 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['login'])){
+    header("Location: ../auth/login.php");
+    exit;
+}
+
+require "../config/database.php";
+
 $title = "Planets";
 $activePage = "Planets";
-include '../includes/navbar.php';
+
+include "../includes/navbar.php";
+
+$data = mysqli_query($conn, "SELECT * FROM planets");
 ?>
+
 <section class="section-planets">
-    <h2 class="section-title">Planet Section</h2>
+
+    <h2 class="section-title">
+        Planet Section
+    </h2>
 
     <div class="planets-container">
 
-        <div class="planet-card">
-            <img src="../assets/planet1.png" alt="Tatooine">
-            <p>Tatooine</p>
-        </div>
+        <?php while($row = mysqli_fetch_assoc($data)) : ?>
 
-        <div class="planet-card">
-            <img src="../assets/planet2.png" alt="">
-            <p>Naboo</p>
-        </div>
+            <div class="planet-card">
 
-        <div class="planet-card">
-            <img src="../assets/planet3.png" alt="Coruscant">
-            <p>Coruscant</p>
-        </div>
+                <img
+                    src="../assets/<?php echo $row['image']; ?>"
+                    alt="">
 
-        <div class="planet-card">
-            <img src="../assets/planet4.png" alt="Hoth">
-            <p>Hoth</p>
-        </div>
+                <p>
+                    <?php echo $row['name']; ?>
+                </p>
+
+            </div>
+
+        <?php endwhile; ?>
 
     </div>
+
 </section>
 
 <?php
-include '../includes/footer.php';
+include "../includes/footer.php";
 ?>
