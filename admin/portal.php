@@ -11,10 +11,7 @@
     <div class="container-auth">
         <h1 class="title-auth">ATMIN PORTAL</h1>
         <p class="subtitle-auth">Khusus untuk admin only</p>
-        <?php if (isset($error)): ?>
-            <p class="error-msg"><?php echo $error; ?></p>
-        <?php endif; ?>
-        <form action="?page=login" method="POST"><br>
+        <form action="portal.php" method="POST"><br>
             <input type="text" id="username" name="username" placeholder="username" class="input-auth" required><br>
             <input type="password" id="password" name="password" placeholder="password" class="input-auth" required><br>
             <label for="remember" class="remember-label"><input type="checkbox" id="remember" name="remember">Stay signed in</label><br>
