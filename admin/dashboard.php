@@ -1,7 +1,16 @@
 <?php
+include '../config/database.php';
+
 $activePage = 'dashboard';
 include '../includes/admin-nav.php';
+
+// Hitung total data
+$totalMovies = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM movies"));
+$totalCharacters = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM characters"));
+$totalPlanets = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM planets"));
+$totalUsers = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users"));
 ?>
+
 <div class="admin-content">
 
     <h2 class="dashboard-title">
@@ -12,22 +21,22 @@ include '../includes/admin-nav.php';
 
         <div class="stat-card">
             <p>🎬 Total Movies</p>
-            <h3>8</h3>
+            <h3><?= $totalMovies; ?></h3>
         </div>
 
         <div class="stat-card">
             <p>👤 Total Characters</p>
-            <h3>16</h3>
+            <h3><?= $totalCharacters; ?></h3>
         </div>
 
         <div class="stat-card">
             <p>🪐 Total Planets</p>
-            <h3>6</h3>
+            <h3><?= $totalPlanets; ?></h3>
         </div>
 
         <div class="stat-card">
             <p>👥 Total Users</p>
-            <h3>8</h3>
+            <h3><?= $totalUsers; ?></h3>
         </div>
 
     </div>
@@ -71,19 +80,19 @@ include '../includes/admin-nav.php';
 
             <div class="quick-actions">
 
-                <a href="add-movie.php" class="quick-btn">
+                <a href="tambah_movie.php" class="quick-btn">
                     + Add Movie
                 </a>
 
-                <a href="add-character.php" class="quick-btn">
+                <a href="tambah_character.php" class="quick-btn">
                     + Add Characters
                 </a>
 
-                <a href="add-planet.php" class="quick-btn">
+                <a href="tambah_planet.php" class="quick-btn">
                     + Add Planet
                 </a>
 
-                <a href="add-user.php" class="quick-btn">
+                <a href="users.php" class="quick-btn">
                     + Add Users
                 </a>
 
