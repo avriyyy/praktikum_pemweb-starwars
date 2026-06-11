@@ -1,14 +1,13 @@
 <?php
 
 $conn = mysqli_connect(
-    "localhost",
-    "root",
-    "NAYLAMYSQL",
-    "starwars_db"
+    "43.134.3.156",
+    "starwars",
+    "starwars",
+    "starwars",
+    3306
 );
 
 if (!$conn) {
-    die("Koneksi database gagal : " . mysqli_connect_error());
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
-
-?>
