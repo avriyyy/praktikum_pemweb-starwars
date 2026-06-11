@@ -26,20 +26,13 @@ include "../includes/navbar.php"; ?>
                 <h2>8</h2>
             </div>
 
-            <div class="stat-box">
-                <span>Favorite Planets</span>
-                <h2>8</h2>
-            </div>
-
-            <div class="stat-box empty"></div>
-
         </div>
 
     </div>
 
     <div class="settings-list">
 
-        <a href="#" class="settings-item">
+        <a href="../user/settings.php" class="settings-item">
             <div>
                 <h3>Account Information</h3>
                 <p>Customize how you'll hear from us.</p>
@@ -49,24 +42,24 @@ include "../includes/navbar.php"; ?>
 
         <a href="#" class="settings-item">
             <div>
-                <h3>Email Preferences</h3>
-                <p>Customize how you'll hear from us.</p>
+                <h3>Security settings</h3>
+                <p>Change password and account security options.</p>
             </div>
             <span>></span>
         </a>
 
-        <a href="#" class="settings-item">
+        <a href="../user/favorites.php" class="settings-item">
             <div>
-                <h3>Password</h3>
-                <p>Change your password.</p>
+                <h3>Favorite Movies</h3>
+                <p>Manage your favorite movies.</p>
             </div>
             <span>></span>
         </a>
 
-        <a href="#" class="settings-item">
+        <a href="../user/about.php" class="settings-item">
             <div>
-                <h3>Favorites</h3>
-                <p>Manage your favorite items.</p>
+                <h3>About Star Wars Database</h3>
+                <p>Version information and project details.</p>
             </div>
             <span>></span>
         </a>

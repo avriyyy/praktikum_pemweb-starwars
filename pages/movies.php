@@ -26,10 +26,11 @@ $data = mysqli_query($conn, "SELECT * FROM movies");
 
             <div class="movie-card">
 
-                <img
-                    src="../assets/<?php echo $row['image']; ?>"
-                    alt="">
-
+                <a href="../pages/detailMovie.php">
+                    <img 
+                        src="../assets/<?php echo $row['image']; ?>"
+                        alt="">
+                </a>
                 <div class="movie-info">
 
                     <h3>

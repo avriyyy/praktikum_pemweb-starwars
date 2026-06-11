@@ -34,7 +34,7 @@ include "../includes/navbar.php"; ?>
 
     </div>
 
-</section
+</section>
 
 <div class="confirm-overlay" id="confirmOverlay">
 

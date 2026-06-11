@@ -26,17 +26,17 @@ if (!isset($activePage)) {
 
     <div class="nav-menu">
 
-        <a href="movies.php"
+        <a href="../pages/movies.php"
         class="<?= ($activePage == 'Movies') ? 'active' : ''; ?>">
             Movies
         </a>
 
-        <a href="characters.php"
+        <a href="../pages/characters.php"
         class="<?= ($activePage == 'Characters') ? 'active' : ''; ?>">
             Characters
         </a>
 
-        <a href="planets.php"
+        <a href="../pages/planets.php"
         class="<?= ($activePage == 'Planets') ? 'active' : ''; ?>">
             Planets
         </a>
@@ -66,36 +66,57 @@ if (!isset($activePage)) {
 
     </div>
 
-    <div style="display:flex;align-items:center;gap:15px;color:white;font-family:Poppins;">
-
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-            <path
-                d="M33.3334 35V31.6667C33.3334 29.8986 32.631 28.2029 31.3808 26.9526C30.1305 25.7024 28.4349 25 26.6667 25H13.3334C11.5653 25 9.86961 25.7024 8.61937 26.9526C7.36913 28.2029 6.66675 29.8986 6.66675 31.6667V35M26.6667 11.6667C26.6667 15.3486 23.682 18.3333 20.0001 18.3333C16.3182 18.3333 13.3334 15.3486 13.3334 11.6667C13.3334 7.98477 16.3182 5 20.0001 5C23.682 5 26.6667 7.98477 26.6667 11.6667Z"
-                stroke="#B3B3B3"
-                stroke-width="3.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-        </svg>
-
-        <span>
-            <?= isset($_SESSION['username']) ? $_SESSION['username'] : ''; ?>
-        </span>
-
-        <?php if (isset($_SESSION['login'])) : ?>
-
-            <a
-                href="../auth/logout.php"
-                style="
-                color:white;
-                text-decoration:none;
-                background:#dc2626;
-                padding:8px 15px;
-                border-radius:8px;">
-                Logout
+    <div class="profile-dropdown">
+        <button class="profile-btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.3334 35V31.6667C33.3334 29.8986 32.631 28.2029 31.3808 26.9526C30.1305 25.7024 28.4349 25 26.6667 25H13.3334C11.5653 25 9.86961 25.7024 8.61937 26.9526C7.36913 28.2029 6.66675 29.8986 6.66675 31.6667V35M26.6667 11.6667C26.6667 15.3486 23.682 18.3333 20.0001 18.3333C16.3182 18.3333 13.3334 15.3486 13.3334 11.6667C13.3334 7.98477 16.3182 5 20.0001 5C23.682 5 26.6667 7.98477 26.6667 11.6667Z" stroke="#B3B3B3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="dropdown-menu">
+    
+            <div class="dropdown-header">
+                <img src="../assets/foto-profile.png" alt="Profile">
+                <span>Apriyudha</span>
+            </div>
+    
+            <a href="../user/profile.php">
+                <img src="../assets/my-profile.svg" alt="">
+                <span>My Profile</span>
             </a>
+    
+            <a href="../user/favorites.php">
+                <img src="../assets/favorites.svg" alt="">
+                <span>Favorites</span>
+            </a>
+    
+            <a href="../user/settings.php">
+                <img src="../assets/settings.svg" alt="">
+                <span>Settings</span>
+            </a>
+            <?php if (isset($_SESSION['login'])) : ?>
+            <a href="../auth/logout.php" class="logout">
+                <img src="../assets/logout.svg" alt="">
+                <span>Logout</span>
+            </a>
+            <?php endif; ?>
 
-        <?php endif; ?>
+        </div>
 
     </div>
 
 </nav>
+
+<script>
+const profileBtn = document.querySelector('.profile-btn');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+profileBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdownMenu.classList.toggle('show');
+});
+
+document.addEventListener('click', () => {
+    dropdownMenu.classList.remove('show');
+});
+</script>

@@ -753,12 +753,6 @@ footer .footer-text {
     filter: opacity(50%);
 }
 
-.movie-info {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
 .movie-poster {
     width: 180px;
     height: 270px;
@@ -2027,4 +2021,300 @@ footer .footer-text {
 .confirm-yes:hover,
 .confirm-no:hover {
     transform: scale(1.05);
+}
+
+/* Container Utama Konten */
+.settings-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Tambah padding-top jadi 120px biar gak nabrak navbar (sesuaikan angkanya kalau masih kurang) */
+    padding: 120px 20px 50px 20px; 
+    position: relative;
+    z-index: 1; 
+}
+
+/* Bagian Header Teks */
+.settings-header {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.settings-header h1 {
+    font-family: 'Orbitron', sans-serif; /* Pake Orbitron */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.settings-header p {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+/* Card Glassmorphism Utama */
+.settings-card {
+    width: 100%;
+    max-width: 600px;
+    background: #0F2147; 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+/* Struktur di dalam Form */
+.settings-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-card h2 {
+    font-family: 'Orbitron', sans-serif; /* Pake Orbitron */
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.settings-card h3 {
+    font-family: 'Orbitron', sans-serif; /* Pake Orbitron */
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 35px 0 20px 0;
+}
+
+/* Wrapper Input */
+.settings-group {
+    background: rgba(255, 255, 255, 0.15); 
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin-bottom: 16px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.settings-group:focus-within {
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+/* Label di dalam Input Box */
+.settings-group label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+/* Reset Input Default */
+.settings-group input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+}
+
+.settings-group input::placeholder {
+    color: #64748b;
+}
+
+/* Tombol Save */
+.settings-save-btn {
+    font-family: 'Orbitron', sans-serif; /* Biar tombolnya ikutan sci-fi */
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 14px auto 0 auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.settings-save-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.about-page {
+    position: relative;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 120px 40px 40px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+/* Header */
+.about-header {
+    margin-bottom: 30px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+.about-header h1 {
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+
+    color: #FFFFFF;
+}
+
+.about-header p {
+    margin: 8px 0 0;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+
+    color: rgba(255,255,255,.8);
+}
+
+/* Vader */
+.about-vader {
+    position: absolute;
+
+    left: -40px;
+    bottom: 0;
+
+    height: 68vh;
+    width: auto;
+
+    z-index: 1;
+}
+
+/* Container utama */
+.about-card {
+    position: relative;
+
+    width: 760px;
+
+    margin-left: auto;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    background: rgba(16, 32, 64, .9);
+
+    box-sizing: border-box;
+
+    z-index: 2;
+}
+
+/* Judul section */
+.about-card h2 {
+    margin: 0 0 14px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #FFFFFF;
+}
+
+/* Box */
+.about-box {
+    padding: 14px;
+
+    border-radius: 8px;
+
+    background: rgba(255,255,255,.12);
+}
+
+.about-box p,
+.about-box li {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #FFFFFF;
+}
+
+/* Features dan Technologies */
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin-top: 22px;
+}
+
+.about-box ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.about-box li {
+    margin-bottom: 6px;
+}
+
+/* Team */
+.team-section {
+    margin-top: 24px;
+}
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin-top: 14px;
+}
+
+.team-card {
+    padding: 14px 10px;
+
+    border-radius: 8px;
+
+    background: rgba(255,255,255,.12);
+
+    text-align: center;
+}
+
+.team-card span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+
+    color: rgba(255,255,255,.8);
+}
+
+.team-card strong {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #FFFFFF;
 }
