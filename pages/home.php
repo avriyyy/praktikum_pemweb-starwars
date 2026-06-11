@@ -18,7 +18,7 @@ include "../includes/navbar.php";
             Discover movies, characters, and planets across the universe.
         </p>
 
-        <button>Explore Now</button>
+        <button onclick="window.location.href='../pages/movies.php'">Explore Now</button>
     </div>
 
 </section>
@@ -37,7 +37,7 @@ include "../includes/navbar.php";
             pertempuran melawan sisi gelap Force.
         </p>
 
-        <button>VIEW ALL MOVIES</button>
+        <button onclick="window.location.href='../pages/movies.php'">VIEW ALL MOVIES</button>
     </div>
 
 </section>
@@ -51,7 +51,7 @@ include "../includes/navbar.php";
             Kenali para tokoh ikonik yang membentuk sejarah galaksi, mulai dari Jedi, Sith, hingga para penyelundup dan pemimpin pemberontakan.
         </p>
 
-        <button>VIEW ALL CHARACTERS</button>
+        <button onclick="window.location.href='../pages/characters.php'">VIEW ALL CHARACTERS</button>
     </div>
 
 </section>
@@ -65,7 +65,7 @@ include "../includes/navbar.php";
             Jelajahi dunia-dunia unik dalam galaksi Star Wars, dari gurun Tatooine hingga kota futuristik Coruscant.
         </p>
 
-        <button>VIEW ALL PLANETS</button>
+        <button onclick="window.location.href='../pages/planets.php'">VIEW ALL PLANETS</button>
     </div>
 
 </section>

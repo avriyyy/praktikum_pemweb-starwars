@@ -1,4 +1,3 @@
-```php
 <?php
 session_start();
 require "../config/database.php";
@@ -77,4 +76,4 @@ Tambah
 
 </body>
 </html>
-```
+

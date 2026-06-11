@@ -1,4 +1,3 @@
-```php
 <?php
 
 function query($query)
@@ -72,4 +71,3 @@ function editCharacter($data)
 }
 
 ?>
-```

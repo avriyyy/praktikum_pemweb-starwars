@@ -23,7 +23,7 @@ include "../includes/navbar.php"; ?>
             </div>
 
             <div class="favorite-actions">
-                <a href="#" class="btn-detail">Lihat detail</a>
+                <a href="../pages/detailMovie.php?id=1" class="btn-detail">Lihat detail</a>
                 <a href="#"
                    class="delete-btn favorite-delete">
                     Delete

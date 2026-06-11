@@ -68,4 +68,4 @@ include "../includes/navbar.php"; ?>
 
 </section>
 
-</div>
+<?php include "../includes/footer.php"; ?>

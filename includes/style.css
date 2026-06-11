@@ -56,7 +56,7 @@ main {
     width: min(400px, 90vw);
     min-height: 460px;
     background: rgba(10, 25, 47, 0.72);
-    border: 1px solid #ffffff 26%;
+    border: 1px solid rgba(255, 255, 255, 0.26);
     border-radius: 24px;
     box-shadow: 0 0 40px #3b82f640;
     padding: 24px;
@@ -64,13 +64,13 @@ main {
 
 .title-auth {
     margin-top: 32px;
-    margin-bottom: 16;
+    margin-bottom: 16px;
     font-family: "Orbitron", sans-serif;
     font-weight: 600;
     font-size: clamp(24px, 3vw, 32px);
     line-height: 100%;
     letter-spacing: 0;
-    filter: opacity(80%);
+    opacity: 0.8;
     color: #ffffff;
     text-align: center;
 }
@@ -83,7 +83,7 @@ main {
     font-size: clamp(10px, 1vw, 14px);
     line-height: 100%;
     letter-spacing: 0;
-    filter: opacity(80%);
+    opacity: 0.8;
     color: #ffffff;
     text-align: center;
 }
@@ -113,7 +113,7 @@ main {
     line-height: 100%;
     letter-spacing: 0;
     color: rgba(255, 255, 255, 0.8);
-    filter: opacity(80%);
+    opacity: 0.8;
 }
 
 /*
@@ -161,7 +161,7 @@ main {
     cursor: pointer;
     transition: 0.3s ease;
     backdrop-filter: blur(4px);
-    align-items: bottom;
+    align-items: flex-end;
 }
 
 .red-btn:hover {
@@ -188,7 +188,7 @@ main {
     color: white;
     cursor: pointer;
     transition: 0.3s ease;
-    align-items: bottom;
+    align-items: flex-end;
 }
 
 .transparent-btn:hover {
@@ -263,12 +263,13 @@ main {
     align-items: center;
     display: flex;
     position: relative;
-    width: 301px;
+    width: min(301px, 25vw);
     height: 29px;
     border: 1px solid #ffffff33;
     border-radius: 10px;
     background: #111827;
     overflow: hidden;
+    flex-shrink: 1;
 }
 
 .nav-search input {
@@ -413,10 +414,12 @@ footer .footer-text {
 
 .characters-container {
     display: grid;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: center;
-    column-gap: 200px;
+    column-gap: clamp(40px, 8vw, 200px);
     row-gap: 70px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .character-card img {
@@ -448,10 +451,11 @@ footer .footer-text {
 
 .planets-container {
     display: grid;
-    grid-template-columns: repeat(2, 402px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
-    column-gap: 250px;
-    row-gap: 100px;
+    gap: clamp(40px, 10vw, 100px);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .planet-card {
@@ -459,8 +463,9 @@ footer .footer-text {
 }
 
 .planet-card img {
-    width: 402px;
-    height: 481px;
+    width: min(402px, 80%);
+    max-width: 402px;
+    aspect-ratio: 402/481;
     object-fit: cover;
     border-radius: 50%;
     overflow: hidden;
@@ -604,7 +609,14 @@ footer .footer-text {
     background: #b91c1c;
 }
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
+
+    .hero,
+    .movies,
+    .characters,
+    .planets {
+        min-height: 70vh;
+    }
 
     .hero-content,
     .movies-content,
@@ -628,7 +640,8 @@ footer .footer-text {
     .movies-content h1,
     .characters-content h1,
     .planets-content h1 {
-        font-size: 42px;
+        font-size: 32px;
+        white-space: normal;
     }
 
     .hero-content p,
@@ -637,8 +650,162 @@ footer .footer-text {
     .planets-content p {
         font-size: 16px;
     }
-<<<<<<< HEAD
-}*/
+
+    .navbar {
+        padding: 0 16px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-search {
+        width: min(280px, 50vw);
+    }
+
+    .section-movies,
+    .section-characters,
+    .section-planets {
+        padding: 80px 24px;
+    }
+
+    .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 24px;
+    }
+
+    .movie-card {
+        width: 100%;
+    }
+
+    .movie-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+    }
+
+    .characters-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+
+    .character-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5/7;
+    }
+
+    .planets-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+    }
+
+    .planet-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
+    .movie-detail,
+    .character-detail {
+        padding: 100px 24px 40px;
+    }
+
+    .movie-content h1 {
+        font-size: 28px;
+    }
+
+    .movie-info {
+        flex-direction: column;
+    }
+
+    .movie-poster {
+        width: 100%;
+        height: auto;
+    }
+
+    .character-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .character-content h1 {
+        font-size: 32px;
+    }
+
+    .profile-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .profile-user {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .settings-list {
+        width: 100%;
+    }
+
+    .profile-page {
+        padding: 100px 24px 40px;
+    }
+
+    .favorite-movies {
+        padding: 100px 24px 40px;
+    }
+
+    .favorite-title {
+        font-size: 32px;
+    }
+
+    .favorite-item {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .hero-content h1,
+    .movies-content h1,
+    .characters-content h1,
+    .planets-content h1 {
+        font-size: 24px;
+    }
+
+    .nav-search {
+        width: min(200px, 45vw);
+    }
+
+    .profile-dropdown {
+        margin-left: 8px;
+    }
+
+    .characters-container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+
+    .planets-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .movies-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
 
 /*dropdown user*/
 
@@ -750,7 +917,7 @@ footer .footer-text {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: opacity(50%);
+    opacity: 0.5;
 }
 
 .movie-poster {
@@ -1166,18 +1333,7 @@ footer .footer-text {
     font-weight: bold;
 }
 
-/*@media (max-width: 1000px) {
-    .profile-top {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .profile-stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .settings-list {
-        width: 100%;
-    }
-}*/
+
 
 .favorite-movies {
     padding: 120px 48px 60px;

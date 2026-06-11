@@ -77,7 +77,7 @@ if (!isset($activePage)) {
     
             <div class="dropdown-header">
                 <img src="../assets/foto-profile.png" alt="Profile">
-                <span>Apriyudha</span>
+                <span><?= $_SESSION['username'] ?? 'User'; ?></span>
             </div>
     
             <a href="../user/profile.php">

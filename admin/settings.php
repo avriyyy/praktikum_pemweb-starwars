@@ -58,7 +58,7 @@ include '../includes/admin-nav.php';
                     <label>Current password</label>
 
                     <input type="password"
-                           value="************">
+                           placeholder="Current password">
 
                 </div>
 
@@ -78,3 +78,5 @@ include '../includes/admin-nav.php';
     </div>
 
 </div>
+
+<?php include '../includes/admin-foot.php'; ?>

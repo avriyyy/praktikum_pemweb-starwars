@@ -84,3 +84,5 @@ include '../includes/admin-nav.php';
     </div>
 
 </div>
+
+<?php include '../includes/admin-foot.php'; ?>

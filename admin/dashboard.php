@@ -103,3 +103,5 @@ $totalUsers = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users"));
     </div>
 
 </div>
+
+<?php include '../includes/admin-foot.php'; ?>

@@ -26,7 +26,7 @@ $data = mysqli_query($conn, "SELECT * FROM movies");
 
             <div class="movie-card">
 
-                <a href="../pages/detailMovie.php">
+                <a href="../pages/detailMovie.php?id=<?= $row['id_movie']; ?>">
                     <img 
                         src="../assets/<?php echo $row['image']; ?>"
                         alt="">

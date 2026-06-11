@@ -24,6 +24,8 @@ $data = mysqli_query($conn, "SELECT * FROM characters");
 
         <?php while($row = mysqli_fetch_assoc($data)) : ?>
 
+            <a href="../pages/detailCharacter.php?id=<?= $row['id_character']; ?>" style="text-decoration:none;">
+
             <div class="character-card">
 
                 <img
@@ -35,6 +37,8 @@ $data = mysqli_query($conn, "SELECT * FROM characters");
                 </p>
 
             </div>
+
+            </a>
 
         <?php endwhile; ?>
 
