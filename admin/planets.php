@@ -127,26 +127,13 @@ include '../includes/admin-nav.php';
 
             <div class="modal-right">
 
-                <label class="upload-box">
+                <label class="upload-box upload-box-planet">
 
                     <input type="file"
                             hidden>
 
-                    <svg width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            fill="none">
-
-                        <path d="M14.2632 15H9.73684C6.01541 15 3 12.0899 3 8.5C3 4.91015 6.01541 2 9.73684 2C12.5362 2 14.9366 3.6498 15.9484 6.00108C16.2849 5.93058 16.6342 5.89362 17 5.89362C19.7614 5.89362 22 8.05374 22 10.7181C22 13.3824 19.7614 15.5426 17 15.5426"
-                                stroke="currentColor"
-                                stroke-width="2"/>
-
-                        <path d="M12 22V12M12 12L8 16M12 12L16 16"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"/>
-                    </svg>
+                    <img src="../assets/upload-img.svg"
+                             alt="">
 
                     <span>
                         Upload Image
@@ -194,6 +181,9 @@ include '../includes/admin-nav.php';
                         placeholder="Climate"
                         class="modal-input">
 
+                <textarea placeholder="Description"
+                            class="modal-textarea"></textarea>
+
                 <button type="submit"
                         class="save-btn">
                     Save
@@ -204,26 +194,13 @@ include '../includes/admin-nav.php';
 
             <div class="modal-right">
 
-                <label class="upload-box">
+                <label class="upload-box upload-box-planet">
 
                     <input type="file"
                             hidden>
 
-                    <svg width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            fill="none">
-
-                        <path d="M14.2632 15H9.73684C6.01541 15 3 12.0899 3 8.5C3 4.91015 6.01541 2 9.73684 2C12.5362 2 14.9366 3.6498 15.9484 6.00108C16.2849 5.93058 16.6342 5.89362 17 5.89362C19.7614 5.89362 22 8.05374 22 10.7181C22 13.3824 19.7614 15.5426 17 15.5426"
-                                stroke="currentColor"
-                                stroke-width="2"/>
-
-                        <path d="M12 22V12M12 12L8 16M12 12L16 16"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"/>
-                    </svg>
+                    <img src="../assets/upload-img.svg"
+                             alt="">
 
                     <span>
                         Upload Image

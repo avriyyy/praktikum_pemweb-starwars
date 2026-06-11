@@ -64,9 +64,6 @@
         <button class="profile-btn">
             <img src="../assets/admin-logo.png" alt="Admin Profile">
         </button>
-
     </div>
 
 </div>
-
- <main class="admin-main">

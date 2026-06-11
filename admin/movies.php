@@ -4,9 +4,7 @@ include '../includes/admin-nav.php';
 ?>
 <div class="admin-content">
 
-    <h2 class="dashboard-title">
-        Movie Management
-    </h2>
+    <h2 class="dashboard-title">Movie Management</h2>
 
     <div class="admin-search">
         <input type="text" placeholder="Search...">
@@ -133,21 +131,7 @@ include '../includes/admin-nav.php';
                     <input type="file"
                             hidden>
 
-                    <svg width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            fill="none">
-
-                        <path d="M14.2632 15H9.73684C6.01541 15 3 12.0899 3 8.5C3 4.91015 6.01541 2 9.73684 2C12.5362 2 14.9366 3.6498 15.9484 6.00108C16.2849 5.93058 16.6342 5.89362 17 5.89362C19.7614 5.89362 22 8.05374 22 10.7181C22 13.3824 19.7614 15.5426 17 15.5426"
-                                stroke="currentColor"
-                                stroke-width="2"/>
-
-                        <path d="M12 22V12M12 12L8 16M12 12L16 16"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"/>
-                    </svg>
+                    <img src="../assets/upload-img.svg" alt="">
 
                     <span>
                         Upload Image
@@ -213,21 +197,8 @@ include '../includes/admin-nav.php';
                     <input type="file"
                             hidden>
 
-                    <svg width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            fill="none">
-
-                        <path d="M14.2632 15H9.73684C6.01541 15 3 12.0899 3 8.5C3 4.91015 6.01541 2 9.73684 2C12.5362 2 14.9366 3.6498 15.9484 6.00108C16.2849 5.93058 16.6342 5.89362 17 5.89362C19.7614 5.89362 22 8.05374 22 10.7181C22 13.3824 19.7614 15.5426 17 15.5426"
-                                stroke="currentColor"
-                                stroke-width="2"/>
-
-                        <path d="M12 22V12M12 12L8 16M12 12L16 16"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"/>
-                    </svg>
+                    <img src="../assets/upload-img.svg"
+                            alt="">
 
                     <span>
                         Upload Image
@@ -309,7 +280,7 @@ include '../includes/admin-nav.php';
             editUploadBox.appendChild(fileInput);
             const preview = document.createElement('img');
             preview.src = imgSrc;
-            preview.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:8px;';
+            preview.style.cssText = 'width:100%;height:100%;object-fit:contain;border-radius:8px;';
             editUploadBox.appendChild(preview);
 
             editModal.classList.add('show');
