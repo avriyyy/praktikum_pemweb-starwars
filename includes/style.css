@@ -1938,3 +1938,93 @@ footer .footer-text {
     background: rgba(255,255,255,.2);
 }
 
+.confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.confirm-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.confirm-box {
+    width: 380px;
+    min-height: 180px;
+    background: rgba(70, 70, 70, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-icon {
+    width: 42px;
+    height: 42px;
+    border: 3px solid #FF3131;
+    border-radius: 50%;
+    color: #FF3131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.confirm-text {
+    margin: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.confirm-yes,
+.confirm-no {
+    width: 65px;
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.confirm-yes {
+    background: white;
+    color: black;
+}
+
+.confirm-no {
+    background: #FF3131;
+    color: white;
+}
+
+.confirm-yes:hover,
+.confirm-no:hover {
+    transform: scale(1.05);
+}
